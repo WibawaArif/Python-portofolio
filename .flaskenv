@@ -1,0 +1,2 @@
+FLASK_APP=portofolio.__init__
+FLASK_ENV=development

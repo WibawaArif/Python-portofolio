@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="main main--project">
+    <div>
+        <img
+            class="hero"
+            src="{{ url_for('static', filename=project['hero']) }}"
+            alt="A hand holding a pen, about to write something in a project planner."
+            style="border-radius: 6px;"
+        />
+
+        <article class="project">
+            <article class="project__content">
+                <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                <p>
+                    Microblog is a simple app which contain the content but, in this project i'm adding
+                    some features such as post a content and delete the content.
+                </p>
+                <p>
+                    User could add whatever the content is and stored to the database which i'm using
+                    MongoDB.
+                </p>
+            </article>
+
+            <section>
+                <article class="project__meta-group">
+                    <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                    <ul class="technology-list">
+                        <li class="technology-list__item">Python</li>
+                        <li class="technology-list__item">HTML</li>
+                        <li class="technology-list__item">CSS</li>
+                    </ul>
+                </article>
+
+                <a class="cta" href="{{ project['prod'] }}" target="_blank" rel="noopener noreferrer">
+                    <img class="cta__icon" src="{{ url_for('static', filename='img/pointer.svg') }}">
+                    View in production
+                </a>
+            </section>
+        </article>
+    </div>
+</main>
+{% endblock %}

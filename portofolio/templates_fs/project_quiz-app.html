@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="main main--project">
+    <div>
+        <img
+            class="hero"
+            src="{{ url_for('static', filename=project['hero']) }}"
+            alt="A hand holding a pen, about to write something in a project planner."
+            style="border-radius: 6px;"
+        />
+
+        <article class="project">
+            <article class="project__content">
+                <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                <p>
+                    As i concern about financial literacy, i had the idea for making a simple quiz that 
+                    contain several questions about personal finance and investment.
+                </p>
+                <p>
+                    User has 5 chances to answer the question and after the questions answered, user will
+                    receive the score entirely. I'm using random module to generate a random question that show
+                    in the front of the page every user submit or refresh the page.
+                </p>
+            </article>
+
+            <section>
+                <article class="project__meta-group">
+                    <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                    <ul class="technology-list">
+                        <li class="technology-list__item">Python</li>
+                        <li class="technology-list__item">HTML</li>
+                        <li class="technology-list__item">CSS</li>
+                    </ul>
+                </article>
+
+                <a class="cta" href="{{ project['prod'] }}" target="_blank" rel="noopener noreferrer">
+                    <img class="cta__icon" src="{{ url_for('static', filename='img/pointer.svg') }}">
+                    View in production
+                </a>
+            </section>
+        </article>
+    </div>
+</main>
+{% endblock %}
