@@ -246,6 +246,11 @@ body {
     background-color: rgb(15, 177, 136);
 }
 
+.main__profile {
+    width: 40%;
+    margin: 0 auto 1rem auto;
+}
+
 
 .u-bare-link {
     text-decoration: none;
