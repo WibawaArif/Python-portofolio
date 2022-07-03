@@ -29,7 +29,16 @@ projects = [{
         "categories": ["python", "web"],
         "slug": "quiz-app",
         "prod": "https://wibawaarif-quizapp.herokuapp.com/"
-        }]
+        },
+        {
+        "name": "Movie watchlist app with Python, Flask Framework, and MongoDB",
+        "thumb": "img/movie-watchlist.jpg",
+        "hero": "img/movie-watchlist-hero.jpg",
+        "categories": ["python", "web"],
+        "slug": "movie-watchlist",
+        "prod": "https://wibawaarif-watchlist.herokuapp.com/"
+        }
+        ]
 
 slug_to_project = {project["slug"]: project for project in projects}
 
